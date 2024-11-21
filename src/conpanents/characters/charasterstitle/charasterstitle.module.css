@@ -1,0 +1,36 @@
+
+.title {
+  display: grid;
+  justify-content: center;
+  margin: 9% 0 3%;
+}
+
+@media screen and (max-width: 900px) {
+  .title img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin: 14% auto 3%;
+  }
+
+}
+
+
+@media screen and (max-width: 550px) {
+  .title {
+    margin: 20% auto 3%;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .title {
+    margin: 30% auto 10%;
+  }
+
+  .title img {
+    max-width: 100%;
+  }
+}

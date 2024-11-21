@@ -1,0 +1,29 @@
+
+
+.nav__el {
+  padding: 0 8px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: grid;
+  align-content: center;
+  border: 0.4px solid #acabab;
+  position: relative;
+}
+
+
+.nav__el select {
+  appearance: none;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7e7e7e;
+}
+
+.nav__el__img {
+  width: 12px;
+  height: 17px;
+  right: 3%;
+  top: 32%;
+  position: absolute;
+}
+
