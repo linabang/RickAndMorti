@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import s from "./charastersperson.module.css";
 import Sersh from "./img/Sersh.svg";
 import FilterBySelects from "../charasternav/filtrBySelects.jsx";
+import { Link } from "react-router-dom";
 function Chaster() {
   const [data, setData] = useState([]);
   const [isError, setError] = useState(false);
@@ -19,6 +20,7 @@ function Chaster() {
         const result = await fetch(
           `https://rickandmortyapi.com/api/character/?gender=${gender}&status=${status}&name=${name}&species=${species}&page=${page}`
         );
+        console.log(result);
         if (!result.ok) {
           return setError(true);
         }
@@ -63,15 +65,16 @@ function Chaster() {
             { value: "alien", label: "Alien" },
             { value: "human", label: "Human" },
             { value: "humanoid", label: "Humanoid" },
+            { value: "unknown", label: "Unknown" },
           ]}
         />
         <FilterBySelects
           onHandleChenge={(value) => handleFilterChange(value, setGender)}
           options={[
             { value: "", label: "Gender" },
-            { value: "femele", label: "Femele" },
+            { value: "female", label: "Female" },
             { value: "male", label: "Male" },
-            { value: "genderieess", label: "Genderieess" },
+            { value: "genderles", label: "Genderles" },
             { value: "unknown", label: "Unknown" },
           ]}
         />
@@ -92,20 +95,20 @@ function Chaster() {
           </div>
         ) : (
           data.map((item, index) => (
-            <div className={s.character__el} key={index}>
-              <img src={item.image} alt={item.name} />
-              <div className={s.character__subtitle}>
-                <h2>{item.name}</h2>
-                <h6>{item.species}</h6>
-              </div>
-            </div>
+              <Link to={`/character/${item.id}`}className={s.character__el} key={index}>
+                <img src={item.image} alt={item.name} />
+                <div className={s.character__subtitle}>
+                  <h2>{item.name}</h2>
+                  <h6>{item.species}</h6>
+                </div>
+              </Link>
           ))
         )}
-        <div className={s.button__wrapper}>
-          <button className={s.button} onClick={() => setPage(page + 1)}>
-            LOAD MORE
-          </button>
-        </div>
+      </div>
+      <div className={s.button__wrapper}>
+        <button className={s.button} onClick={() => setPage(page + 1)}>
+          LOAD MORE
+        </button>
       </div>
     </>
   );

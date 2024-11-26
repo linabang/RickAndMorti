@@ -1,0 +1,57 @@
+
+.title {
+  display: grid;
+  justify-content: center;
+  margin: 8% 0 3%;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .title {
+      margin: 11.5% 0 6.5%;
+  }
+}
+
+
+
+@media screen and (max-width: 750px) {
+
+  .title {
+      margin: 13% 0 6%;
+  }
+}
+
+
+@media screen and (max-width: 667px) {
+  .title {
+      margin: 14% 0 6%;
+  }
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+  .title {
+      margin: 16% 0 6%;
+  }
+
+  .title img {
+      max-width: 250px;
+  }
+}
+
+
+
+@media screen and (max-width:450px) {
+
+
+  .title {
+      margin: 22% auto 5%;
+  }
+
+  .title img {
+      max-width: 175px;
+  }
+}

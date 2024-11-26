@@ -4,7 +4,7 @@
   display: grid;
   justify-content: space-between;
   row-gap: 24px;
-  margin-bottom: 145px;
+  margin-bottom: 30px;
   grid-template: repeat(2, 240px) / repeat(4, 23%);
   grid-auto-rows: auto;
 }
@@ -44,9 +44,9 @@
 }
 
 .button__wrapper{
-  width: 435%;
   display: grid;
   justify-content: center;
+  margin-bottom: 90px;
 }
 
 .button{

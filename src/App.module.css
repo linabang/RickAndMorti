@@ -1,9 +1,13 @@
-
 .container {
   max-width: 63%;
   margin: 0 auto;
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
 
 @media screen and (max-width: 1500px) {
   .container {
@@ -20,5 +24,9 @@
 @media screen and (max-width: 667px) {
   .container {
     max-width: 90%;
+  }
+
+  .error {
+    margin-top: 40%;
   }
 }

@@ -2,6 +2,8 @@
 import s from './header.module.css'
 import Logo from './img/logo-black 1.svg'
 import Menu from './img/menu_24px.svg'
+import { Link } from 'react-router-dom';
+
 function Header () {
 
   return (
@@ -14,9 +16,9 @@ function Header () {
         </div>
         <div className={s.header__nav__wrapper}>
           <nav className={s.header__nav}>
-            <p className={s.header__nav__link} >Characters</p>
-            <p className={s.header__nav__link} >Locations</p>
-            <p className={s.header__nav__link} >Episodes</p>
+            <Link to={'/'} className={s.header__nav__link} >Characters</Link>
+            <Link to={'/locations'} className={s.header__nav__link} >Locations</Link>
+            <Link to={'/episode'}  className={s.header__nav__link} >Episodes</Link>
           </nav>
           <img className={s.header__nav__img} src={Menu}/>
         </div>

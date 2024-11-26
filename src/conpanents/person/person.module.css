@@ -1,0 +1,185 @@
+
+.person__data_wraapper {
+  margin: 90px 0 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link__img {
+  top: 98px;
+  position: fixed;
+}
+
+.person__data__title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.imege {
+  max-height: 12px;
+  max-width: 12px;
+  transform: rotate(260deg);
+}
+
+.person__col {
+  margin-top: 42px;
+  width: 87%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 49% 49%;
+}
+
+.person__Informations__title ,
+.person__episodes__title{
+  color: #8E8E93;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.person__informations,
+.person__episodes {
+  display: grid;
+  row-gap: 36px;
+}
+
+.person__informations__inner,
+.person__episodes__inner {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.person__informations__inner {
+  grid-template: repeat(6, 64px) / repeat(1, 95%);
+}
+
+
+.person__episodes__inner {
+  grid-template: repeat(4, 88px) / repeat(1, 95%);
+  overflow: auto;
+}
+
+.person__episodes,
+.information__el {
+  height: 100%;
+  display: grid;
+  box-sizing: border-box;
+  border-bottom: 0.5px solid #d3cfcf;
+}
+
+.information__el {
+  padding: 9px 0 12px;
+}
+
+.epesodes__el {
+  padding: 10px 0 16px;
+}
+
+.information__el__text,
+.episodes__el__text {
+  display: grid;
+}
+
+
+.information__el :last-child,
+.episodes__el__text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6E798C;
+}
+
+
+.information__el__text :first-child,
+.episodes__el__text :first-child {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.information__el :first-child {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.episodes__el__text :last-child {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+
+#block {
+  position: relative;
+}
+
+#block a {
+  position: absolute;
+  padding: 10px;
+  right: 3%;
+  top: 25%;
+}
+
+
+@media screen and (max-width:500px) {
+
+  .person__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person__data img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .person__data__title ,
+  .person__episodes__title{
+    font-size: 40px;
+  }
+
+
+  .person__col {
+    grid-template-columns: 100%;
+    row-gap: 52px;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+
+  .person__col{
+    width: 95%;
+  }
+
+  .person__data_wraapper {
+    margin: 120px 0 146px;
+  }
+
+  .link__img {
+    top: 82px;
+  }
+
+  .person__data img {
+    max-width: 146px;
+    max-height: 148px;
+  }
+
+  .person__data__title {
+    font-size: 32px;
+  }
+
+  .person__col {
+    margin-top: 32px;
+  }
+
+  .person__informations,
+  .person__episodes {
+    row-gap: 16px;
+  }
+
+
+}
