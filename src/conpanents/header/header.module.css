@@ -47,6 +47,31 @@ a{
   display: none;
 }
 
+.header__nav__adaptiv {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vh;
+  height: 100vh;
+  background-color: white;
+  z-index: 999;
+}
+
+.header__nav__adaptiv__wrapper {
+  margin-top: 30%;
+  margin-left: 10%;
+  display: flex;
+  row-gap: 38px;
+  flex-direction: column;
+}
+
+.header__nav__adaptiv__link {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+}
+
+
 @media screen and (max-width: 1500px) {
   .container {
     min-width: 71%;

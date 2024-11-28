@@ -1,4 +1,3 @@
-
 .location__wrapper {
   display: grid;
   justify-content: space-between;
@@ -40,7 +39,7 @@
   font-weight: 700;
   letter-spacing: 0.25px;
 }
-.error{
+.error {
   min-width: 100vh;
 }
 
@@ -75,66 +74,68 @@
   font-weight: 400;
 }
 
+.button__wrapper {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+
+.button {
+  outline: none;
+  border: none;
+  padding: 10px 33px;
+  background-color: white;
+  color: #2196f3;
+  box-shadow: rgba(0, 0, 0, 0.25) 5px 10px 10px,
+    rgba(0, 0, 0, 0.22) 5px 10px 10px;
+}
 
 @media screen and (max-width: 900px) {
   .location__wrapper {
-      grid-template: repeat(4, 128px) / repeat(3, 31%);
+    grid-template: repeat(4, 128px) / repeat(3, 31%);
   }
 
   .location__el__subtitle :hover {
-      transform: scale(1.07);
-      transition: transform 0.5s;
+    transform: scale(1.07);
+    transition: transform 0.5s;
   }
-  
+
   .nav {
     margin-bottom: 40px;
+    grid-template: 56px / 100%;
   }
 }
-
-
 
 @media screen and (max-width: 667px) {
   .location__wrapper {
-      grid-template: repeat(5, 145px) / repeat(3, 31%);
-      grid-auto-rows: auto;
+    grid-template: repeat(5, 145px) / repeat(3, 31%);
+    grid-auto-rows: auto;
   }
-
 }
-
 
 @media screen and (max-width: 550px) {
   .location__el__subtitle {
-      padding: 30px 30px;
+    padding: 30px 30px;
   }
 
   .location__wrapper {
-      grid-template: repeat(5, 145px) / repeat(2, 47%);
-      grid-auto-rows: auto;
-  }
-  
-  .nav {
-    grid-template: repeat(2, 56px) / repeat(2, 47%);
-    row-gap: 15px;
+    grid-template: repeat(5, 145px) / repeat(2, 47%);
+    grid-auto-rows: auto;
   }
 }
 
-
-
-@media screen and (max-width:450px) {
-
+@media screen and (max-width: 450px) {
   .location__wrapper {
-      grid-template: repeat(12, 145px) / repeat(1, 100%);
-      grid-auto-rows: auto;
-      row-gap: 16px;
+    grid-template: repeat(12, 145px) / repeat(1, 100%);
+    grid-auto-rows: auto;
+    row-gap: 16px;
   }
-  
+
   .location__el__subtitle {
-      padding: 30px 45px;
+    padding: 30px 45px;
   }
 
   .nav {
-    grid-template: repeat(4, 56px) / repeat(1, 100%);
-    row-gap: 20px;
     margin-bottom: 66px;
   }
 }

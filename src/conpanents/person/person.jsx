@@ -86,12 +86,12 @@ const Person = () => {
                 </div>
                 <div className={s.information__el}>
                   <span>Type</span>
-                  <span>{data?.type || "неизвестно"}</span>
+                  <span>{data?.type || "unknow"}</span>
                 </div>
                 <div id={s.block} className={s.information__el}>
                   <div className={s.information__el__text}>
                     <span>Location</span>
-                    <span>={data?.location?.name} </span>
+                    <span>{data?.location?.name} </span>
                   </div>
                   <a href="#">
                     <img className={s.imege} src={Arrow} />

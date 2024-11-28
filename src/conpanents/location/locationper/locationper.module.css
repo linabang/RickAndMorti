@@ -1,0 +1,176 @@
+
+a {
+  text-decoration: none;
+}
+
+.decision {
+  display: grid;
+  grid-gap: 24px;
+  margin: 9% auto 0.5%;
+}
+
+.link__img {
+  top: 10%;
+  position: fixed;
+}
+
+.decision__title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #081f32;
+  text-align: center;
+}
+
+.decision__modifier {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+  column-gap: 15px;
+}
+
+
+.decision__madifier__el {
+  width: 50%;
+  display: grid;
+}
+
+.decision__madifier__el :first-child {
+  font-size: 16px;
+  font-weight: 700;
+  color: #081f32;
+}
+
+.decision__madifier__el :last-child {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6e798c;
+}
+
+.residents {
+  display: grid;
+  row-gap: 24px;
+  margin-bottom: 60px;
+}
+
+.residents__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #8e8e93;
+}
+
+.residents__wrapper {
+  display: grid;
+  justify-content: space-between;
+  row-gap: 24px;
+  grid-template: repeat(3, 240px) / repeat(4, 23%);
+  grid-auto-rows: auto;
+}
+
+.residents__el {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: grid;
+  border-radius: 4px;
+  grid-template: 70% 30% / repeat(1, 100%);
+}
+
+.residents__img img {
+  object-fit: cover;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.residents__subtitle {
+  display: grid;
+  color: #000;
+  padding: 12px 16px;
+  row-gap: 3px;
+}
+
+.residents__subtitle :first-child {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.residents__subtitle :last-child {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7e7e7e;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .decision {
+    margin: 10.5% 0 6.5%;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .decision {
+    margin: 11.5% 0 6.5%;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .decision {
+    margin: 15.5% 0 6.5%;
+  }
+
+  .residents__wrapper {
+    grid-template: repeat(4, 240px) / repeat(3, 31%);
+    grid-auto-rows: auto;
+  }
+}
+
+
+@media screen and (max-width: 667px) {
+  .decision__title {
+    font-size: 32px;
+  }
+
+  .decision__modifier {
+    width: 100%;
+  }
+
+  .decistion {
+    margin: 20% 0 6.5%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .decision {
+    margin: 22% 0 6.5%;
+  }
+
+  .residents__wrapper {
+    grid-template: repeat(5, 240px) / repeat(2, 47%);
+    grid-auto-rows: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .decision {
+    margin: 31% 0 15%;
+  }
+
+  .residents__wrapper {
+    grid-template: repeat(6, 312px) / repeat(1, 100%);
+    grid-auto-rows: auto;
+    row-gap: 24px;
+  }
+
+  .residents__el {
+    grid-template: 80% 20% / repeat(1, 100%);
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  .decision {
+    margin: 41.5% 0 31%;
+  }
+}

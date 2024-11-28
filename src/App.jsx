@@ -2,9 +2,11 @@ import s from "./App.module.css";
 import Header from "./conpanents/header/header.jsx";
 import Chasters from "./conpanents/characters/charasters.jsx";
 import { Route, Routes } from "react-router-dom";
-import Episode from "./conpanents/episode/episode.jsx";  
-import Location from "./conpanents/location/location.jsx";
+import Episode from "./conpanents/episode/episode.jsx";
+import Locations from "./conpanents/location/location.jsx";
 import Charaster from "./conpanents/person/person.jsx";
+import Locationper from "./conpanents/location/locationper/locationper.jsx"
+import Episodeper from "./conpanents/episode/episodeper/episodeper.jsx";
 function App() {
   return (
     <div>
@@ -30,7 +32,7 @@ function App() {
           path={"/locations"}
           element={
             <div className={s.container}>
-              <Location />
+              <Locations />
             </div>
           }
         />
@@ -39,6 +41,22 @@ function App() {
           element={
             <div className={s.container}>
               <Charaster />
+            </div>
+          }
+        />
+        <Route
+          path={"/locationper/:id"}
+          element={
+            <div className={s.container}>
+              <Locationper />
+            </div>
+          }
+        />
+        <Route
+          path={"/episodeper/:id"}
+          element={
+            <div className={s.container}>
+              <Episodeper />
             </div>
           }
         />
