@@ -66,7 +66,9 @@
   grid-template: repeat(4, 88px) / repeat(1, 95%);
   overflow: auto;
 }
-
+.div{  
+  height: 100%;
+}
 .person__episodes,
 .information__el {
   height: 100%;

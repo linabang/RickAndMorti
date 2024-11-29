@@ -108,7 +108,7 @@ const Person = () => {
                 <span>Episodes</span>
               </div>
               <div className={s.person__episodes__inner}>
-                <div>{episode.map((ep) => (
+                <div className={s.div}>{episode.map((ep) => (
                   <Personlocation
                     key={ep.id}
                     origin={ep.episode}

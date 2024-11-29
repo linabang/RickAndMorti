@@ -2,6 +2,10 @@ a{
   text-decoration-skip-ink: none;
 }
 
+.episodes__el{
+  margin: 10px;
+}
+
 .episodes__el__text {
   display: flex;
   flex-direction: column;
