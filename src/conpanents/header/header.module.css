@@ -72,19 +72,19 @@ a{
 }
 
 
-@media screen and (max-width: 1500px) {
+@media  (max-width: 1500px) {
   .container {
     min-width: 71%;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media  (max-width: 1200px) {
   .container {
     min-width: 83%;
   }
 }
 
-@media screen and (max-width: 667px) {
+@media  (max-width: 667px) {
   .container {
     max-width: 90%;
   }

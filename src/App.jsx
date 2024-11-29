@@ -5,11 +5,11 @@ import { Route, Routes } from "react-router-dom";
 import Episode from "./conpanents/episode/episode.jsx";
 import Locations from "./conpanents/location/location.jsx";
 import Charaster from "./conpanents/person/person.jsx";
-import Locationper from "./conpanents/location/locationper/locationper.jsx"
+import Locationper from "./conpanents/location/locationper/locationper.jsx";
 import Episodeper from "./conpanents/episode/episodeper/episodeper.jsx";
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Routes>
         <Route
@@ -69,7 +69,7 @@ function App() {
           }
         />
       </Routes>
-    </div>
+    </>
   );
 }
 

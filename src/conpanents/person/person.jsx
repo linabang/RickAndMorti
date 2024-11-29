@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Linkimg from "./img/Group 4.svg";
 import Arrow from "./img/10728680.png";
 import { useState, useEffect } from "react";
-
+import Personlocation from "./personlocation/personlocation";
 const Person = () => {
   const [isError, setError] = useState(false);
   const [data, setData] = useState([]);
@@ -42,6 +42,10 @@ const Person = () => {
     return <h1>Is loading ...</h1>;
   }
 
+  const locationUrl = data?.location?.url || ""; 
+  const locationId = locationUrl.split("/").filter(Boolean).pop();
+  console.log(locationId);
+  
   return (
     <>
       <Link to={"/"} className={s.link__img}>
@@ -88,15 +92,15 @@ const Person = () => {
                   <span>Type</span>
                   <span>{data?.type || "unknow"}</span>
                 </div>
-                <div id={s.block} className={s.information__el}>
+                <Link to={`/locationper/${locationId}`} id={s.block} className={s.information__el}>
                   <div className={s.information__el__text}>
                     <span>Location</span>
                     <span>{data?.location?.name} </span>
                   </div>
-                  <a href="#">
+                  
                     <img className={s.imege} src={Arrow} />
-                  </a>
-                </div>
+                  
+                </Link>
               </div>
             </div>
             <div className={s.person__episodes}>
@@ -104,18 +108,15 @@ const Person = () => {
                 <span>Episodes</span>
               </div>
               <div className={s.person__episodes__inner}>
-               <Link>{episode.map((ep) => (
-                  <div id={s.block} className={s.epesodes__el}key={ep.id}>
-                    <div className={s.episodes__el__text} >
-                      <span>{ep.name}</span>
-                      <span>{ep.air_date}</span>
-                      <span>{ep.episode}</span>
-                    </div>
-                    <a href="#">
-                      <img className={s.imege} src={Arrow} />
-                    </a>
-                  </div>
-                ))}</Link> 
+                <div>{episode.map((ep) => (
+                  <Personlocation
+                    key={ep.id}
+                    origin={ep.episode}
+                    name={ep.name}
+                    date={ep.air_date}
+                    id={ep.id}
+                  />
+                ))}</div>
               </div>
             </div>
           </div>

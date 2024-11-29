@@ -18,15 +18,13 @@
   text-align: center;
 }
 
-.imege {
-  max-height: 12px;
-  max-width: 12px;
-  transform: rotate(260deg);
+.person__data__img{
+  border-radius: 50%;
 }
 
 .person__col {
   margin-top: 42px;
-  width: 87%;
+  width: 100%;
   display: grid;
   justify-content: space-between;
   grid-template-columns: 49% 49%;
@@ -110,18 +108,24 @@
   letter-spacing: 1.5px;
 }
 
+.error h1{
+  top: 50%;
+  min-width: 100vh;
+}
+
 
 #block {
   position: relative;
 }
 
-#block a {
+#block img {
+  max-width: 12px;
+  transform: rotate(260deg);
   position: absolute;
   padding: 10px;
   right: 3%;
   top: 25%;
 }
-
 
 @media screen and (max-width:500px) {
 
